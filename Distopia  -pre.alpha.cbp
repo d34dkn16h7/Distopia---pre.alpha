@@ -2,13 +2,13 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="ninjaGame(sfml-pre.alpha)" />
+		<Option title="&apos;Distopia&apos;  -pre.alpha" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Dbg">
-				<Option output="ninjaGame(sfml-pre)" prefix_auto="1" extension_auto="1" />
-				<Option object_output="C:\Users\d34dkn16h7\Desktop\ninjaGame(sfml-pre.alpha)\.objs" />
+				<Option output="Distopia  -pre.alpha" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
@@ -16,8 +16,8 @@
 				</Compiler>
 			</Target>
 			<Target title="Rls">
-				<Option output="ninjaGame(sfml-pre)" prefix_auto="1" extension_auto="1" />
-				<Option object_output="C:\Users\d34dkn16h7\Desktop\ninjaGame(sfml-pre.alpha)\.objs" />
+				<Option output="Distopia  -pre.alpha" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>

@@ -38,13 +38,11 @@ public:
         iList[key] = img;
     }
     sf::Texture& GetTexture(string key)
-    {
-        return iList[key];
-    }
+        {return iList[key];}
+    sf::Texture GetTextureVar(string key)
+        {return iList[key];}
     int GetAnimCount(string key)
-    {
-        return aList[key];
-    }
+        {return aList[key];}
 };
 class UpdateEvent
 {
@@ -52,19 +50,74 @@ private:
     vector<CallBack> uFunc;
 public:
     void AddFunction(CallBack func)
-    {
-        uFunc.push_back(func);
-    }
-    void RemoveFunction(CallBack func)
-    {
-        //CallBack tmp = uFunc.back();
-    }
+        {uFunc.push_back(func);}
     void Update()
     {
         for(unsigned int i = 0; i < uFunc.size(); i++)
+            {uFunc[i]();}
+    }
+};
+class GameObject //in progress
+{
+private:
+protected:
+    float x,y,rotation;
+public:
+};
+class World //in progress
+{
+private:
+public:
+void load(string source);
+};
+class Animation //in progress
+{
+private:
+    int counter;
+    int currentAnimationIndex;
+    int animationCount;
+    int frameLimit;
+    bool updateRecived;
+    float chunkSize;
+    float scale;
+    sf::Texture texture;
+    sf::Sprite sprite;
+public:
+    Animation(int animCount,int frame,sf::Texture t)
+    {
+        scale = 1;
+        texture = t;
+        counter = 0;
+        currentAnimationIndex = 0;
+        frameLimit = frame;
+        chunkSize = t.getSize().x / animCount;
+        animationCount = (int)(t.getSize().x / chunkSize);
+        sprite.setTexture(texture);
+        sprite.setTextureRect(sf::IntRect(currentAnimationIndex * chunkSize,0,chunkSize,texture.getSize().y));
+    }
+    void c_update()
+    {
+        counter++;
+        if(counter > frameLimit)
         {
-            uFunc[i]();
+            currentAnimationIndex++;
+            if(currentAnimationIndex >= animationCount)
+                currentAnimationIndex = 0;
+
+            counter = 0;
+            sprite.setTextureRect(sf::IntRect(currentAnimationIndex * chunkSize,0,chunkSize,texture.getSize().y));
         }
+    }
+    void draw(sf::RenderWindow &window,float x,float y)
+    {
+        sprite.setPosition(x,y);
+        window.draw(sprite);
+    }
+    void s_scale(float s)
+    {
+        //scale = s;
+        //chunkSize = (texture.getSize().x / animationCount) * s;
+        sprite.setScale(s,s);
     }
 };
 

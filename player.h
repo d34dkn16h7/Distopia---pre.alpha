@@ -5,42 +5,20 @@
 #include "Manager.h"
 #include "temp.h"
 
-class Player
+class Player : GameObject
 {
 private:
-    int spriteCount;
-
-    int animTimer;
-
-    int animFrontIndex;
-    int animRightIndex;
-    int animLeftIndex;
-    int animJumpIndex;
-
-    int animFrontToNext;
-    int animRightToNext;
-    int animLeftToNext;
-    int animJumpToNext;
-
-    int animFrontLenght;
-    int animRightLenght;
-    int animLeftLenght;
-    int animJumpLenght;
-
-    bool animFrontReset;
-    bool animRightReset;
-    bool animLeftReset;
-    bool animJumpReset;
-
-    sf::Sprite self[4];
+    //sf::Sprite self[4];
+    Animation* self[4];
     float playerHeight;
     float speed;
     float grav;
     bool right,left,up,down;
     bool jump,grounded;
     Force _force;
+    float tmp;
 public:
-    float x,y,targetY;
+    float targetY;
     Player(TextureManager &tManager,float xVal,float yVal);
     void draw();
     void update();
