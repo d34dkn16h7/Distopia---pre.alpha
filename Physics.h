@@ -1,0 +1,5 @@
+class Physics
+{
+private:
+public:
+};

@@ -1,0 +1,52 @@
+# depslib dependency file v1.0
+1351616123 source:c:\users\d34dkn16h7\desktop\ninjagame(sfml-pre.alpha)\main.cpp
+	"main.h"
+	<iostream>
+
+1351616491 source:c:\users\d34dkn16h7\desktop\ninjagame(sfml-pre.alpha)\player.cpp
+	"player.h"
+	<iostream>
+
+1351612299 c:\users\d34dkn16h7\desktop\ninjagame(sfml-pre.alpha)\player.h
+	<SFML/Graphics.hpp>
+	"main.h"
+	"Manager.h"
+	"temp.h"
+
+1351616105 c:\users\d34dkn16h7\desktop\ninjagame(sfml-pre.alpha)\main.h
+	<SFML/Graphics.hpp>
+	<SFML/Window.hpp>
+	"player.h"
+	"Manager.h"
+
+1351612254 c:\users\d34dkn16h7\desktop\ninjagame(sfml-pre.alpha)\temp.h
+	<fstream>
+	<vector>
+	<map>
+	<iostream>
+	"player.h"
+
+1350565944 source:c:\users\d34dkn16h7\desktop\ninjagame(sfml-pre.alpha)\imagem.cpp
+	"ImageM.h"
+	<SFML\Graphics.hpp>
+
+1350563050 c:\users\d34dkn16h7\desktop\ninjagame(sfml-pre.alpha)\imagem.h
+	<vector>
+	<map>
+	<SFML/Graphics.hpp>
+
+1350658654 c:\users\d34dkn16h7\desktop\ninjagame(sfml-pre.alpha)\texturemanager.h
+	<vector>
+	<map>
+	<SFML/Graphics.hpp>
+
+1350655625 source:c:\users\d34dkn16h7\desktop\ninjagame(sfml-pre.alpha)\texturemanager.cpp
+	"TextureManager.h"
+	<SFML\Graphics.hpp>
+
+1351601362 source:c:\users\d34dkn16h7\desktop\ninjagame(sfml-pre.alpha)\physics.cpp
+
+1351612391 c:\users\d34dkn16h7\desktop\ninjagame(sfml-pre.alpha)\manager.h
+	<vector>
+	<map>
+
