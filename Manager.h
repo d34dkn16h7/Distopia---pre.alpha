@@ -6,7 +6,7 @@
 #include <vector>
 #include <string>
 #include <map>
-#include <SFML/Graphics.hpp>
+//#include <SFML/Graphics.hpp>
 
 using namespace std;
 typedef void (*CallBack)(void);

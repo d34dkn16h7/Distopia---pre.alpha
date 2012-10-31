@@ -66,13 +66,12 @@
 	"Manager.h"
 	"temp.h"
 
-1351674027 c:\users\d34dkn16h7\desktop\ninjagame.sfml-pre.alpha\manager.h
+1351674173 c:\users\d34dkn16h7\desktop\ninjagame.sfml-pre.alpha\manager.h
 	<iostream>
 	<fstream>
 	<vector>
 	<string>
 	<map>
-	<SFML/Graphics.hpp>
 
 1351612254 c:\users\d34dkn16h7\desktop\ninjagame.sfml-pre.alpha\temp.h
 	<fstream>
