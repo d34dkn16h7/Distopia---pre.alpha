@@ -50,3 +50,40 @@
 	<vector>
 	<map>
 
+1351674055 source:c:\users\d34dkn16h7\desktop\ninjagame.sfml-pre.alpha\main.cpp
+	"main.h"
+
+1351674053 c:\users\d34dkn16h7\desktop\ninjagame.sfml-pre.alpha\main.h
+	<iostream>
+	<SFML/Graphics.hpp>
+	<SFML/Window.hpp>
+	"player.h"
+	"Manager.h"
+
+1351612299 c:\users\d34dkn16h7\desktop\ninjagame.sfml-pre.alpha\player.h
+	<SFML/Graphics.hpp>
+	"main.h"
+	"Manager.h"
+	"temp.h"
+
+1351674027 c:\users\d34dkn16h7\desktop\ninjagame.sfml-pre.alpha\manager.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<map>
+	<SFML/Graphics.hpp>
+
+1351612254 c:\users\d34dkn16h7\desktop\ninjagame.sfml-pre.alpha\temp.h
+	<fstream>
+	<vector>
+	<map>
+	<iostream>
+	"player.h"
+
+1351616602 source:c:\users\d34dkn16h7\desktop\ninjagame.sfml-pre.alpha\player.cpp
+	"player.h"
+	<iostream>
+
+1351601362 source:c:\users\d34dkn16h7\desktop\ninjagame.sfml-pre.alpha\physics.cpp
+

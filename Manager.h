@@ -1,9 +1,12 @@
 #ifndef MANAGER_H
-#define MANAGER_H
+    #define MANAGER_H
 
+#include <iostream>
+#include <fstream>
 #include <vector>
+#include <string>
 #include <map>
-//#include <SFML/Graphics.hpp>
+#include <SFML/Graphics.hpp>
 
 using namespace std;
 typedef void (*CallBack)(void);
@@ -16,6 +19,19 @@ private:
 public:
     TextureManager() {}
     ~TextureManager() {}
+    void load(string source)
+    {
+        ifstream file(source.c_str());
+        string fName,tag;
+        int animCount;
+        while(file >> fName >> tag >> animCount)
+        {
+            sf::Texture tempImg;
+            tempImg.loadFromFile(fName);
+            AddTexture(tempImg,tag,animCount);
+            cout << fName << " : has loaded with this tag : " << tag << endl;
+        }
+    }
     void AddTexture(sf::Texture& img,string key,int animCount)
     {
         aList[key] = animCount;

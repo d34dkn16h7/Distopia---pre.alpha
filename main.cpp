@@ -1,5 +1,4 @@
 #include "main.h"
-#include <iostream>
 using namespace std;
 sf::RenderWindow mWindow;
 sf::Sprite bgSprite;
@@ -7,22 +6,10 @@ Player *mPlayer;
 static TextureManager textureManager;
 sf::Texture tImg;
 const float FPS = 120;
-void loadTextures()
-{
-    ifstream file("imgList");
-    string fName,tag;
-    int animCount;
-    while(file >> fName >> tag >> animCount)
-    {
-        sf::Texture tempImg;
-        tempImg.loadFromFile(fName);
-        textureManager.AddTexture(tempImg,tag,animCount);
-        cout << fName << " : has loaded with this tag : " << tag << endl;
-    }
-}
+
 void init()
 {
-    loadTextures();
+    textureManager.load("imgList");
     bgSprite.setTexture(textureManager.GetTexture("background"));
 
     bgSprite.setScale(
@@ -85,7 +72,7 @@ int main()
         }
         if(windowActive && fpsClock.getElapsedTime().asSeconds() > (1.f / 120))
         {
-            cout << fpsClock.getElapsedTime().asSeconds() << endl;
+            //cout << fpsClock.getElapsedTime().asSeconds() << endl;
             frameRate = fpsClock.getElapsedTime().asSeconds();
             uFrame.Update();
             fpsClock.restart();
