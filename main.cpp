@@ -3,15 +3,14 @@ using namespace std;
 sf::RenderWindow mWindow;
 sf::Sprite bgSprite;
 Player *mPlayer;
-static TextureManager textureManager;
+static TextureManager textureManager("imgList");
+static World myWorld("world.map");
 sf::Texture tImg;
 const float FPS = 120;
 
 void init()
 {
-    textureManager.load("imgList");
     bgSprite.setTexture(textureManager.GetTexture("background"));
-
     bgSprite.setScale(
                        (float)800 / textureManager.GetTexture("background").getSize().x,
                        (float)500 / textureManager.GetTexture("background").getSize().y);
@@ -29,6 +28,7 @@ void drawUpdate()
 {
     mWindow.clear(sf::Color(255,0,0));
     mWindow.draw(bgSprite);
+    myWorld.draw(mWindow,textureManager);
     mPlayer->draw();
     mWindow.display();
 }
@@ -74,7 +74,8 @@ int main()
         {
             //cout << fpsClock.getElapsedTime().asSeconds() << endl;
             frameRate = fpsClock.getElapsedTime().asSeconds();
-            uFrame.Update();
+            uFrame.Update(); // draw & updates
+
             fpsClock.restart();
         }
     }

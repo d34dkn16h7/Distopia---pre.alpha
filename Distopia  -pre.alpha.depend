@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1351689673 source:c:\users\d34dkn16h7\desktop\distopia  -pre.alpha\main.cpp
+1351694962 source:c:\users\d34dkn16h7\desktop\distopia  -pre.alpha\main.cpp
 	"main.h"
 
 1351674053 c:\users\d34dkn16h7\desktop\distopia  -pre.alpha\main.h
@@ -15,7 +15,7 @@
 	"Manager.h"
 	"temp.h"
 
-1351688576 c:\users\d34dkn16h7\desktop\distopia  -pre.alpha\manager.h
+1351695408 c:\users\d34dkn16h7\desktop\distopia  -pre.alpha\manager.h
 	<iostream>
 	<fstream>
 	<vector>
@@ -29,7 +29,7 @@
 	<iostream>
 	"player.h"
 
-1351690729 source:c:\users\d34dkn16h7\desktop\distopia  -pre.alpha\player.cpp
+1351693858 source:c:\users\d34dkn16h7\desktop\distopia  -pre.alpha\player.cpp
 	"player.h"
 	<iostream>
 

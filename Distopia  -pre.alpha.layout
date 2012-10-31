@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Dbg" />
+	<File name="Manager.h" open="0" top="0" tabpos="0">
+		<Cursor position="2611" topLine="33" />
+	</File>
+	<File name="main.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1093" topLine="43" />
+	</File>
+	<File name="player.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1924" topLine="48" />
+	</File>
 </CodeBlocks_layout_file>

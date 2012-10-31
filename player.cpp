@@ -5,6 +5,7 @@
 #define LEFT 2
 Player::Player(TextureManager &tManager,float xVal = 0,float yVal = 0)
 {
+    name = "Player";
     tmp = 1;
     speed = 1.25f;
     grav = 1;
