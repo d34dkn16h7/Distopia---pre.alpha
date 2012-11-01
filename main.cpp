@@ -34,16 +34,19 @@ void drawUpdate()
 }
 void update()
 {
+    mPlayer->groundedUpdate(myWorld.collision(mPlayer->getPosition()));
     mPlayer->update();
 }
 int main()
 {
     init();
     UpdateEvent uFrame;
-    mPlayer = new Player(textureManager,400,0);
+    mPlayer = new Player(textureManager,400,250);
     bool windowActive = true;
+
     uFrame.AddFunction(update);
     uFrame.AddFunction(drawUpdate);
+
     sf::Clock fpsClock;
     fpsClock.restart();
     while(mWindow.isOpen())
@@ -70,7 +73,7 @@ int main()
                 break;
             }
         }
-        if(windowActive && fpsClock.getElapsedTime().asSeconds() > (1.f / 120))
+        if(windowActive && fpsClock.getElapsedTime().asSeconds() > (1.f / 120))//120))
         {
             //cout << fpsClock.getElapsedTime().asSeconds() << endl;
             frameRate = fpsClock.getElapsedTime().asSeconds();

@@ -25,8 +25,24 @@ public:
     void input();
     void setPos(float valX,float valY)
     {
-        x = valX;
-        y = valY;
+        position.c_x = valX;
+        position.c_x = valY;
+    }
+    void groundedUpdate(bool val)
+    {
+        grounded = val;
+    }
+    m_rect getPosition()
+    {
+        return position;
+    }
+    float gX()
+    {
+        return position.c_x;
+    }
+    float gY()
+    {
+        return position.c_x;
     }
 };
 #endif

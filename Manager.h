@@ -5,7 +5,6 @@
 #include <vector>
 #include <string>
 #include <map>
-//#include <SFML/Graphics.hpp>
 
 using namespace std;
 typedef void (*CallBack)(void);
@@ -70,18 +69,64 @@ public:
         }
     }
 };
+class m_rect //- done NImp
+{
+private:
+public:
+    float c_x,c_y,w,h;
+    float left,top,right,bottom;
+    m_rect(float center_x = 0,float center_y = 0,float weight = 0,float height = 0)
+    {
+        c_x = center_x;
+        c_y = center_y;
+        w = weight;
+        h = height;
+        calc();
+    }
+    void calc()
+    {
+        left = c_x - (w/2);
+        right = c_x + (w/2);
+        top = c_y - (h/2);
+        bottom = c_y + (h/2);
+    }
+    static bool intersection(m_rect first,m_rect second)
+    {
+        if(first.left < second.right && first.right > second.left)
+        {
+            if(first.top < second.bottom && first.bottom > second.top)//
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    static bool contain(m_rect rc,float x,float y)
+    {
+        if(rc.left < x && rc.right > x)
+        {
+            if(rc.bottom < y && rc.top > y)
+                return true;
+        }
+        return false;
+    }
+};
 class GameObject //in progress
 {
 private:
 protected:
 public:
-    float x,y,rotation;
+    m_rect position;
+    float rotation;
     string name;
     GameObject(string n = "null",float pos_x = 0,float pos_y = 0,float rot_r = 0)
     {
+        position.c_x = pos_x;
+        position.c_y = pos_y;
+        position.h = 32;
+        position.w = 32;
+        position.calc();
         name = n;
-        x = pos_x;
-        y = pos_y;
         rotation = rot_r;
     }
 };
@@ -113,17 +158,33 @@ public:
     void draw(sf::RenderWindow &r,TextureManager &tManager)
     {
         sf::Sprite sprite;
-        for(int i = 0;i < objects.size();i++)
+        GameObject gmo;
+        for(unsigned int i = 0;i < objects.size();i++)
         {
-            GameObject gmo = objects[i];
+            gmo = objects[i];
             sprite.setTexture(tManager.GetTexture(gmo.name));
-            sprite.setPosition(gmo.x,gmo.y);
+            sprite.setPosition(gmo.position.left,gmo.position.top);
             sprite.setRotation(gmo.rotation);
             r.draw(sprite);
         }
     }
+    bool collision(m_rect player)
+    {
+        GameObject gmo;
+        for(unsigned int i = 0;i < objects.size();i++)
+        {
+            gmo = objects[i];
+            if(m_rect::intersection(player,gmo.position))
+            {
+                //cout << "true" << endl;
+                return true;
+            }
+        }
+        //cout << "false" << endl;
+        return false;
+    }
 };
-class Animation
+class Animation //- done NImp
 {
 private:
     int counter;
@@ -161,9 +222,9 @@ public:
             sprite.setTextureRect(sf::IntRect(currentAnimationIndex * chunkSize,0,chunkSize,texture.getSize().y));
         }
     }
-    void draw(sf::RenderWindow &window,float x,float y)
+    void draw(sf::RenderWindow &window,m_rect pos)
     {
-        sprite.setPosition(x,y);
+        sprite.setPosition(pos.left,pos.top);
         window.draw(sprite);
     }
     void s_scale(float s)
