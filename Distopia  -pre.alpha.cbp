@@ -39,6 +39,7 @@
 			<Add directory="..\..\..\..\SFML-2.0-rc\lib" />
 		</Linker>
 		<Unit filename="Code\Animation.cpp" />
+		<Unit filename="Code\GameObject.cpp" />
 		<Unit filename="Code\Main.cpp" />
 		<Unit filename="Code\Manager.h" />
 		<Unit filename="Code\Physics.cpp" />

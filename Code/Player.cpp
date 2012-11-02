@@ -1,5 +1,6 @@
 #include "player.h"
 #include <iostream>
+#include <vector>
 #define FRONT 0
 #define RIGHT 1
 #define LEFT 2
@@ -40,7 +41,8 @@ void Player::update()
     if(!right && left) position.c_x -= speed;
     if(up && !down) position.c_y -= speed;
     if(!up && down) position.c_y += speed;
-    if(up && !jump)
+
+    /*if(up && !jump)
     {
         targetY = position.c_y - 200;
         _force.AddEvent((int)&position.c_y,"JumpEvent-Test.String",100,1.2f);
@@ -57,7 +59,7 @@ void Player::update()
         else
             jump = false;
     }
-    else if(position.bottom < (mWindow.getSize().y) && !grounded) // simple grav,
+    else*/ if(!up &&position.bottom < (mWindow.getSize().y) && !grounded) // simple grav,
     {
         position.c_y += grav;
     }
@@ -69,4 +71,22 @@ void Player::input()
     left = sf::Keyboard::isKeyPressed(sf::Keyboard::A);
     up = sf::Keyboard::isKeyPressed(sf::Keyboard::W);
     down = sf::Keyboard::isKeyPressed(sf::Keyboard::S);
+}
+void Player::onCollision(vector<Collider> vec)
+{
+    grounded = false;
+    for(unsigned int i = 0;i < vec.size();i++)
+    {
+        switch(vec[i].side)
+        {
+            case Bottom:/*
+            if(vec[i].tag == "wDirt")
+            {
+
+            }*/
+            grounded = true;
+            break;
+        }
+
+    }
 }

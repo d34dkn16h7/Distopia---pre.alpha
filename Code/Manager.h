@@ -8,6 +8,42 @@
 #include <SFML\Graphics.hpp>
 using namespace std;
 typedef void (*CallBack)(void);
+enum Side
+{
+    Right,Left,Top,Bottom,None
+};
+class Collider
+{
+public:
+  Side side;
+  string tag;
+  //GameObject* obj;
+  Collider();
+  Collider(string tag,Side s);
+};
+class m_rect
+{
+private:
+public:
+    float c_x,c_y,w,h;
+    float left,top,right,bottom;
+    m_rect();
+    m_rect(float center_x,float center_y,float weight,float height);
+    void calc();
+    static Collider intersection(m_rect first,m_rect second);
+    static bool contain(m_rect rc,float x,float y);
+};
+class GameObject //in progress
+{
+private:
+protected:
+public:
+    m_rect position;
+    float rotation;
+    string name;
+    GameObject();
+    GameObject(string n,float pos_x,float pos_y,float rot_r,float w,float h);
+};
 class TextureManager
 {
 private:
@@ -38,69 +74,7 @@ public:
         }
     }
 };
-class m_rect
-{
-private:
-public:
-    float c_x,c_y,w,h;
-    float left,top,right,bottom;
-    m_rect(float center_x = 0,float center_y = 0,float weight = 0,float height = 0)
-    {
-        c_x = center_x;
-        c_y = center_y;
-        w = weight;
-        h = height;
-        calc();
-    }
-    void calc()
-    {
-        left = c_x - (w/2);
-        right = c_x + (w/2);
-        top = c_y - (h/2);
-        bottom = c_y + (h/2);
-    }
-    static bool intersection(m_rect first,m_rect second)
-    {
-        if(first.left < second.right && first.right > second.left)
-        {
-            if(first.top < second.bottom && first.bottom > second.top)//
-            {
-                return true;
-            }
-        }
-        return false;
-    }
-    static bool contain(m_rect rc,float x,float y)
-    {
-        if(rc.left < x && rc.right > x)
-        {
-            if(rc.bottom < y && rc.top > y)
-                return true;
-        }
-        return false;
-    }
-};
-class GameObject //in progress
-{
-private:
-protected:
-public:
-    m_rect position;
-    float rotation;
-    string name;
-    GameObject(string n = "null",float pos_x = 0,float pos_y = 0,float rot_r = 0,float w = 32,float h = 32)
-    {
-        cout<<w << ":" << h<<endl;
-        position.c_x = pos_x;
-        position.c_y = pos_y;
-        position.h = w;
-        position.w = h;
-        position.calc();
-        name = n;
-        rotation = rot_r;
-    }
-};
-class World //in progress
+class World
 {
 private:
     GameObject tmpObject;
@@ -110,7 +84,7 @@ public:
     void load(string source);
     void AddObject(GameObject gmo);
     void draw(sf::RenderWindow &r,TextureManager &tManager);
-    bool collision(m_rect player);
+    vector<Collider> collision(m_rect player);
 };
 class Animation
 {
@@ -129,5 +103,10 @@ public:
     void c_update();
     void draw(sf::RenderWindow &window,m_rect pos);
     void s_scale(float s);
+};
+class Physics
+{
+private:
+public:
 };
 #endif

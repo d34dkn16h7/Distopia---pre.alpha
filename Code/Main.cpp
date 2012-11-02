@@ -36,7 +36,7 @@ void drawUpdate()
 }
 void update()
 {
-    mPlayer->groundedUpdate(myWorld.collision(mPlayer->getPosition()));
+    mPlayer->onCollision(myWorld.collision(mPlayer->getPosition()));
     mPlayer->update();
 }
 int main()

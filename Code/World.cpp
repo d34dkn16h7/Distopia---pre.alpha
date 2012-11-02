@@ -32,17 +32,21 @@ void World::draw(sf::RenderWindow &r,TextureManager &tManager)
         r.draw(sprite);
     }
 }
-bool World::collision(m_rect player)
+vector<Collider> World::collision(m_rect player)
 {
+    vector<Collider> vect;
     for(unsigned int i = 0; i < objects.size(); i++)
     {
         tmpObject = objects[i];
-        if(m_rect::intersection(player,tmpObject.position))
+        Collider col = m_rect::intersection(player,tmpObject.position);
+        if(col.side != None)
         {
+            col.tag = tmpObject.name;
+            vect.push_back(col);
             //cout << "true" << endl;
-            return true;
+            //return true;
         }
     }
     //cout << "false" << endl;
-    return false;
+    return vect;
 }

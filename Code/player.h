@@ -22,6 +22,7 @@ public:
     void draw();
     void update();
     void input();
+    void onCollision(vector<Collider> vec);
     void setPos(float valX,float valY)
     {
         position.c_x = valX;

@@ -1,5 +1,1 @@
-class Physics
-{
-private:
-public:
-};
+
