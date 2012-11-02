@@ -1,10 +1,12 @@
 #include "main.h"
+
 using namespace std;
+
 sf::RenderWindow mWindow;
 sf::Sprite bgSprite;
 Player *mPlayer;
-static TextureManager textureManager("imgList");
-static World myWorld("world.map");
+static TextureManager textureManager("data/imgList");
+static World myWorld("data/world.map");
 sf::Texture tImg;
 const float FPS = 120;
 

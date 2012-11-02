@@ -9,8 +9,6 @@ Player::Player(TextureManager &tManager,float xVal = 0,float yVal = 0)
     tmp = 1;
     speed = 1.25f;
     grav = 1;
-    float scaleSize = 1;
-    //playerHeight = (tManager.GetTexture("pFront").getSize().y * scaleSize);
     up = false;
     down = false;
     right = false;
@@ -40,9 +38,9 @@ void Player::update()
     //grounded = y >= (mWindow.getSize().y - playerHeight);
     if(right && !left) position.c_x += speed;
     if(!right && left) position.c_x -= speed;
-    //if(up && !down) position.c_y -= speed;
-    //if(!up && down) position.c_y += speed;
-    if(up && !jump && grounded)
+    if(up && !down) position.c_y -= speed;
+    if(!up && down) position.c_y += speed;
+    if(up && !jump)
     {
         targetY = position.c_y - 200;
         _force.AddEvent((int)&position.c_y,"JumpEvent-Test.String",100,1.2f);
@@ -59,7 +57,7 @@ void Player::update()
         else
             jump = false;
     }
-    else if(position.bottom < (mWindow.getSize().y - position.h) && !grounded) // simple grav,
+    else if(position.bottom < (mWindow.getSize().y) && !grounded) // simple grav,
     {
         position.c_y += grav;
     }

@@ -8,7 +8,6 @@
 class Player : GameObject
 {
 private:
-    //sf::Sprite self[4];
     Animation* self[4];
     float playerHeight;
     float speed;

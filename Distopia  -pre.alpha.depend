@@ -15,7 +15,7 @@
 	"Manager.h"
 	"temp.h"
 
-1351783591 c:\users\d34dkn16h7\desktop\distopia  -pre.alpha\manager.h
+1351786638 c:\users\d34dkn16h7\desktop\distopia  -pre.alpha\manager.h
 	<iostream>
 	<fstream>
 	<vector>
@@ -29,9 +29,62 @@
 	<iostream>
 	"player.h"
 
-1351783822 source:c:\users\d34dkn16h7\desktop\distopia  -pre.alpha\player.cpp
+1351786661 source:c:\users\d34dkn16h7\desktop\distopia  -pre.alpha\player.cpp
 	"player.h"
 	<iostream>
 
 1351601362 source:c:\users\d34dkn16h7\desktop\distopia  -pre.alpha\physics.cpp
+
+1351788976 source:c:\users\d34dkn16h7\desktop\distopia  -pre.alpha\code\main.cpp
+	"main.h"
+
+1351674053 c:\users\d34dkn16h7\desktop\distopia  -pre.alpha\code\main.h
+	<iostream>
+	<SFML/Graphics.hpp>
+	<SFML/Window.hpp>
+	"player.h"
+	"Manager.h"
+
+1351787493 c:\users\d34dkn16h7\desktop\distopia  -pre.alpha\code\player.h
+	<SFML/Graphics.hpp>
+	"main.h"
+	"Manager.h"
+	"temp.h"
+
+1351849565 c:\users\d34dkn16h7\desktop\distopia  -pre.alpha\code\manager.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<map>
+	<SFML\Graphics.hpp>
+
+1351788257 c:\users\d34dkn16h7\desktop\distopia  -pre.alpha\code\texturemanager.h
+	<map>
+	<string>
+	<fstream>
+
+1351612254 c:\users\d34dkn16h7\desktop\distopia  -pre.alpha\code\temp.h
+	<fstream>
+	<vector>
+	<map>
+	<iostream>
+	"player.h"
+
+1351848720 source:c:\users\d34dkn16h7\desktop\distopia  -pre.alpha\code\player.cpp
+	"player.h"
+	<iostream>
+
+1350997320 source:c:\users\d34dkn16h7\desktop\distopia  -pre.alpha\code\temp.cpp
+
+1351601362 source:c:\users\d34dkn16h7\desktop\distopia  -pre.alpha\code\physics.cpp
+
+1351789336 source:c:\users\d34dkn16h7\desktop\distopia  -pre.alpha\code\texturemanager.cpp
+	"Manager.h"
+
+1351849393 source:c:\users\d34dkn16h7\desktop\distopia  -pre.alpha\code\world.cpp
+	"Manager.h"
+
+1351849509 source:c:\users\d34dkn16h7\desktop\distopia  -pre.alpha\code\animation.cpp
+	"Manager.h"
 
