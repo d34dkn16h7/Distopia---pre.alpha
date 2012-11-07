@@ -7,24 +7,15 @@ sf::Sprite bgSprite;
 Player *mPlayer;
 static TextureManager textureManager("data/imgList");
 static World myWorld("data/world.map");
-sf::Texture tImg;
 const float FPS = 120;
-
 void init()
 {
     bgSprite.setTexture(textureManager.GetTexture("background"));
-    bgSprite.setScale(
-                       (float)800 / textureManager.GetTexture("background").getSize().x,
-                       (float)500 / textureManager.GetTexture("background").getSize().y);
+    bgSprite.setScale((float)800 / textureManager.GetTexture("background").getSize().x,
+                      (float)500 / textureManager.GetTexture("background").getSize().y);
     bgSprite.setPosition(0,0);
-    //mWindow.setFramerateLimit(FPS);
     mWindow.setMouseCursorVisible(false);
-    //mWindow.setVerticalSyncEnabled(true);
-    mWindow.create(sf::VideoMode(800,//textureManager.GetTexture("background").getSize().x / 2,
-                                 500//textureManager.GetTexture("background").getSize().y / 2
-                                 ,32),
-                   "'Distopia'  -pre.alpha",
-                   !sf::Style::Resize | sf::Style::Close);
+    mWindow.create(sf::VideoMode(800,500,32),"'Distopia'  -pre.alpha",!sf::Style::Resize | sf::Style::Close);
 }
 void drawUpdate()
 {
@@ -36,7 +27,6 @@ void drawUpdate()
 }
 void update()
 {
-    mPlayer->onCollision(myWorld.collision(mPlayer->getPosition()));
     mPlayer->update();
 }
 int main()
@@ -45,7 +35,6 @@ int main()
     UpdateEvent uFrame;
     mPlayer = new Player(textureManager,400,250);
     bool windowActive = true;
-
     uFrame.AddFunction(update);
     uFrame.AddFunction(drawUpdate);
 
@@ -75,12 +64,10 @@ int main()
                 break;
             }
         }
-        if(windowActive && fpsClock.getElapsedTime().asSeconds() > (1.f / 120))//120))
+        if(windowActive && fpsClock.getElapsedTime().asSeconds() > (1.f / 60))//120))
         {
-            //cout << fpsClock.getElapsedTime().asSeconds() << endl;
             frameRate = fpsClock.getElapsedTime().asSeconds();
-            uFrame.Update(); // draw & updates
-
+            uFrame.Update();
             fpsClock.restart();
         }
     }

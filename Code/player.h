@@ -2,7 +2,7 @@
 #define PLAYER_H
 #include <SFML/Graphics.hpp>
 #include "main.h"
-#include "Manager.h"
+#include "manager.h"
 #include "temp.h"
 
 class Player : GameObject
@@ -13,6 +13,7 @@ private:
     float speed;
     float grav;
     bool right,left,up,down;
+    bool c_right,c_left,c_up,c_down;
     bool jump,grounded;
     Force _force;
     float tmp;
@@ -22,27 +23,18 @@ public:
     void draw();
     void update();
     void input();
-    void onCollision(vector<Collider> vec);
-    void setPos(float valX,float valY)
-    {
-        position.c_x = valX;
-        position.c_x = valY;
-    }
+    void GravityUpdate();
     void groundedUpdate(bool val)
     {
         grounded = val;
     }
+    void reRect()
+    {
+        position.calc();
+    }
     m_rect getPosition()
     {
         return position;
-    }
-    float gX()
-    {
-        return position.c_x;
-    }
-    float gY()
-    {
-        return position.c_x;
     }
 };
 #endif

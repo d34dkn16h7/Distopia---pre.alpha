@@ -1,4 +1,4 @@
-#include "Manager.h"
+#include "manager.h"
 Animation::Animation(int animCount,int frame,sf::Texture t)
 {
     scale = 1;

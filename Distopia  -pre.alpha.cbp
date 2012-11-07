@@ -38,19 +38,18 @@
 			<Add library="sfml-system" />
 			<Add directory="..\..\..\..\SFML-2.0-rc\lib" />
 		</Linker>
-		<Unit filename="Code\Animation.cpp" />
-		<Unit filename="Code\GameObject.cpp" />
-		<Unit filename="Code\Main.cpp" />
-		<Unit filename="Code\Manager.h" />
-		<Unit filename="Code\Physics.cpp" />
-		<Unit filename="Code\Physics.h" />
-		<Unit filename="Code\Player.cpp" />
-		<Unit filename="Code\TextureManager.cpp" />
-		<Unit filename="Code\World.cpp" />
+		<Unit filename="Code\animation.cpp" />
+		<Unit filename="Code\collider.cpp" />
+		<Unit filename="Code\gameObject.cpp" />
+		<Unit filename="Code\m_rect.cpp" />
+		<Unit filename="Code\main.cpp" />
 		<Unit filename="Code\main.h" />
+		<Unit filename="Code\manager.h" />
+		<Unit filename="Code\player.cpp" />
 		<Unit filename="Code\player.h" />
-		<Unit filename="Code\temp.cpp" />
 		<Unit filename="Code\temp.h" />
+		<Unit filename="Code\textureManager.cpp" />
+		<Unit filename="Code\world.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

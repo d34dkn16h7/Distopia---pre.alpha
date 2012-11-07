@@ -1,31 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Dbg" />
-	<File name="Code\Animation.cpp" open="0" top="0" tabpos="2">
-		<Cursor position="1011" topLine="0" />
+	<File name="Code\animation.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="11" topLine="0" />
 	</File>
-	<File name="Code\GameObject.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="137" topLine="0" />
+	<File name="Code\collider.cpp" open="0" top="0" tabpos="1">
+		<Cursor position="11" topLine="0" />
 	</File>
-	<File name="Code\Main.cpp" open="0" top="0" tabpos="2">
-		<Cursor position="1310" topLine="18" />
+	<File name="Code\gameObject.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="11" topLine="0" />
 	</File>
-	<File name="Code\Manager.h" open="0" top="0" tabpos="1">
-		<Cursor position="458" topLine="25" />
+	<File name="Code\m_rect.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="11" topLine="0" />
 	</File>
-	<File name="Code\Physics.cpp" open="0" top="0" tabpos="1">
-		<Cursor position="459" topLine="10" />
+	<File name="Code\main.cpp" open="1" top="1" tabpos="0">
+		<Cursor position="1492" topLine="31" />
 	</File>
-	<File name="Code\Player.cpp" open="0" top="0" tabpos="3">
-		<Cursor position="2302" topLine="28" />
+	<File name="Code\main.h" open="0" top="0" tabpos="0">
+		<Cursor position="147" topLine="0" />
 	</File>
-	<File name="Code\TextureManager.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="695" topLine="0" />
+	<File name="Code\manager.h" open="0" top="0" tabpos="1">
+		<Cursor position="1764" topLine="0" />
 	</File>
-	<File name="Code\World.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="1121" topLine="8" />
+	<File name="Code\player.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1685" topLine="0" />
 	</File>
-	<File name="Code\player.h" open="0" top="0" tabpos="0">
-		<Cursor position="531" topLine="0" />
+	<File name="Code\player.h" open="0" top="0" tabpos="4">
+		<Cursor position="553" topLine="0" />
+	</File>
+	<File name="Code\temp.h" open="0" top="0" tabpos="0">
+		<Cursor position="151" topLine="0" />
+	</File>
+	<File name="Code\textureManager.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="11" topLine="0" />
+	</File>
+	<File name="Code\world.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="11" topLine="0" />
 	</File>
 </CodeBlocks_layout_file>

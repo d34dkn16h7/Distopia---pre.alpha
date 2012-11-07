@@ -4,7 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include "player.h"
-#include "Manager.h"
+#include "manager.h"
 extern sf::RenderWindow mWindow;
 extern const float FPS;
 static float frameRate;

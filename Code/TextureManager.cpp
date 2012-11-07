@@ -1,4 +1,4 @@
-#include "Manager.h"
+#include "manager.h"
 TextureManager::TextureManager(string source = "null")
 {
     if(source != "null")

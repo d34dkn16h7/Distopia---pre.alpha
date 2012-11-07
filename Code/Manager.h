@@ -8,18 +8,25 @@
 #include <SFML\Graphics.hpp>
 using namespace std;
 typedef void (*CallBack)(void);
-enum Side
+namespace N_Side
 {
-    Right,Left,Top,Bottom,None
-};
+    enum Side
+    {
+        Right,Left,Top,Bottom,Both,None
+    };
+}
+using namespace N_Side;
 class Collider
 {
 public:
-  Side side;
+  Side vertical;
+  Side horizontal;
+  float x_depth,y_depth;
   string tag;
   //GameObject* obj;
   Collider();
-  Collider(string tag,Side s);
+  Collider(string tag,Side h,Side v);
+  Collider(string tag,Side side[]);
 };
 class m_rect
 {

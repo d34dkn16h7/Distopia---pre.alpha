@@ -1,4 +1,4 @@
-#include "Manager.h"
+#include "manager.h"
 
 World::World(string source = "null")
 {
@@ -39,7 +39,7 @@ vector<Collider> World::collision(m_rect player)
     {
         tmpObject = objects[i];
         Collider col = m_rect::intersection(player,tmpObject.position);
-        if(col.side != None)
+        if(col.vertical != None || col.horizontal != None)
         {
             col.tag = tmpObject.name;
             vect.push_back(col);

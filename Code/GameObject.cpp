@@ -1,4 +1,4 @@
-#include "Manager.h"
+#include "manager.h"
 GameObject::GameObject()
 {
     position.c_x = 0;
