@@ -4,3 +4,4 @@ data/Player/r1.png pRight 3
 data/Player/l1.png pLeft 3
 data/Player/jf1.png pJump 3
 data/dirt.png wDirt 1
+data/stone.png wStone 1

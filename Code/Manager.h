@@ -40,7 +40,7 @@ public:
     static Collider intersection(m_rect first,m_rect second);
     static bool contain(m_rect rc,float x,float y);
 };
-class GameObject //in progress
+class GameObject
 {
 private:
 protected:
@@ -111,7 +111,7 @@ public:
     void draw(sf::RenderWindow &window,m_rect pos);
     void s_scale(float s);
 };
-class Physics
+class Body
 {
 private:
 public:

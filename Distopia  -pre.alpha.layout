@@ -8,33 +8,33 @@
 		<Cursor position="11" topLine="0" />
 	</File>
 	<File name="Code\gameObject.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="11" topLine="0" />
+		<Cursor position="423" topLine="0" />
 	</File>
 	<File name="Code\m_rect.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="11" topLine="0" />
 	</File>
-	<File name="Code\main.cpp" open="1" top="1" tabpos="0">
-		<Cursor position="1492" topLine="31" />
+	<File name="Code\main.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="524" topLine="0" />
 	</File>
 	<File name="Code\main.h" open="0" top="0" tabpos="0">
 		<Cursor position="147" topLine="0" />
 	</File>
 	<File name="Code\manager.h" open="0" top="0" tabpos="1">
-		<Cursor position="1764" topLine="0" />
+		<Cursor position="465" topLine="0" />
 	</File>
-	<File name="Code\player.cpp" open="0" top="0" tabpos="0">
+	<File name="Code\player.cpp" open="1" top="0" tabpos="2">
 		<Cursor position="1685" topLine="0" />
 	</File>
 	<File name="Code\player.h" open="0" top="0" tabpos="4">
-		<Cursor position="553" topLine="0" />
+		<Cursor position="0" topLine="0" />
 	</File>
 	<File name="Code\temp.h" open="0" top="0" tabpos="0">
 		<Cursor position="151" topLine="0" />
 	</File>
 	<File name="Code\textureManager.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="11" topLine="0" />
+		<Cursor position="885" topLine="0" />
 	</File>
-	<File name="Code\world.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="11" topLine="0" />
+	<File name="Code\world.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="468" topLine="0" />
 	</File>
 </CodeBlocks_layout_file>

@@ -37,7 +37,6 @@ int main()
     bool windowActive = true;
     uFrame.AddFunction(update);
     uFrame.AddFunction(drawUpdate);
-
     sf::Clock fpsClock;
     fpsClock.restart();
     while(mWindow.isOpen())
@@ -58,8 +57,7 @@ int main()
                 break;
             case sf::Event::KeyPressed:
             case sf::Event::KeyReleased:
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
-                    mWindow.close();
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) mWindow.close();
                 mPlayer->input();
                 break;
             }

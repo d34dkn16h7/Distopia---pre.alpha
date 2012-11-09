@@ -13,7 +13,7 @@ void World::load(string source)
     while(file >> tag >> x >> y >> r)
     {
         AddObject(GameObject(tag,x,y,r,32,32));
-        cout << tag << x << y << r << endl;
+        cout << tag <<" : "<< x <<" : "<< y << " : "<< r << endl;
     }
 }
 void World::AddObject(GameObject gmo)
@@ -43,10 +43,7 @@ vector<Collider> World::collision(m_rect player)
         {
             col.tag = tmpObject.name;
             vect.push_back(col);
-            //cout << "true" << endl;
-            //return true;
         }
     }
-    //cout << "false" << endl;
     return vect;
 }
