@@ -1,4 +1,4 @@
-#include "manager.h"
+#include "m_rect.h"
 
 m_rect::m_rect()
 {
@@ -16,6 +16,7 @@ m_rect::m_rect(float center_x,float center_y,float weight,float height)
     h = height;
     calc();
 }
+
 void m_rect::calc()
 {
     left = c_x - (w/2);
@@ -64,15 +65,36 @@ Collider m_rect::intersection(m_rect first/* PLAYER */,m_rect second/* OBJECT */
             col.x_depth = second.right - first.left;
         }
     }
-    //return false;
     return col;
 }
 bool m_rect::contain(m_rect rc,float x,float y)
 {
     if(rc.left < x && rc.right > x)
     {
-        if(rc.bottom < y && rc.top > y)
+        if(rc.bottom > y && rc.top < y)
             return true;
+    }
+    return false;
+}
+bool m_rect::contain(int x,int y)
+{
+    if(left < x && right > x)
+    {
+        if(bottom > y && top < y)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+bool m_rect::contain(sf::Vector2i vec)
+{
+    if(left < vec.x && right > vec.x)
+    {
+        if(bottom > vec.y && top < vec.y)
+        {
+            return true;
+        }
     }
     return false;
 }

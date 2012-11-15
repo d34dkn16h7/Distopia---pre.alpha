@@ -8,6 +8,7 @@ Player::Player(TextureManager &tManager,float xVal = 0,float yVal = 0)
 {
     name = "Player";
     tmp = 1;
+    scale = 1;
     speed = 1.25f;
     grav = .5f;
     up = false;
@@ -35,19 +36,26 @@ void Player::draw()
 }
 void Player::update()
 {
-    self[FRONT]->c_update();
-    self[RIGHT]->c_update();
-    self[LEFT]->c_update();
+    if(left && !right) self[LEFT]->c_update();
+    else if(right && !left) self[RIGHT]->c_update();
+    else self[FRONT]->c_update();
 
     reRect();
     m_rect tmp = position;
 
-    if(right && !left && !c_left) tmp.c_x += speed;
-    if(!right && left && !c_right) tmp.c_x -= speed;
-    if(up && !down) tmp.c_y -= speed;
-    if(!up && down) tmp.c_y += speed;
+    if(right && !left && !c_left) tmp.c_x += (speed * scale);
+    if(!right && left && !c_right) tmp.c_x -= (speed * scale);
+    if(up && !down) tmp.c_y -= (speed * scale);
+    if(!up && down) tmp.c_y += (speed * scale);
     position = tmp;
     reRect();
+}
+void Player::mouseEvent(sf::Vector2i mPos)
+{
+    if(position.contain(mPos))
+    {
+        cout << "Player clicked!" << endl;
+    }
 }
 void Player::input()
 {

@@ -1,9 +1,10 @@
 #ifndef PLAYER_H
 #define PLAYER_H
-#include <SFML/Graphics.hpp>
-#include "main.h"
-#include "manager.h"
-#include "temp.h"
+#include "textureManager.h"
+#include "gameObject.h"
+#include "animation.h"
+#include "m_rect.h"
+#include "main.h" //global var
 
 class Player : GameObject
 {
@@ -15,8 +16,8 @@ private:
     bool right,left,up,down;
     bool c_right,c_left,c_up,c_down;
     bool jump,grounded;
-    Force _force;
     float tmp;
+    float scale;
 public:
     float targetY;
     Player(TextureManager &tManager,float xVal,float yVal);
@@ -28,6 +29,7 @@ public:
     {
         grounded = val;
     }
+    void mouseEvent(sf::Vector2i mPos);
     void reRect()
     {
         position.calc();

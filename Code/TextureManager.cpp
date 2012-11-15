@@ -1,4 +1,4 @@
-#include "manager.h"
+#include "textureManager.h"
 TextureManager::TextureManager(string source = "null")
 {
     if(source != "null")
@@ -12,9 +12,13 @@ void TextureManager::load(string source)
     while(file >> fName >> tag >> animCount)
     {
         sf::Texture tempImg;
-        tempImg.loadFromFile(fName);
-        AddTexture(tempImg,tag,animCount);
-        cout << fName << " : has loaded with this tag : " << tag << endl;
+        if(tempImg.loadFromFile(fName))
+        {
+            AddTexture(tempImg,tag,animCount);
+            cout << fName << " : has loaded with this tag : " << tag << endl;
+        }
+        else
+            cout << fName << " : CAN'T LOAD: " << tag << endl;
     }
 }
 void TextureManager::AddTexture(sf::Texture& img,string key,int animCount)

@@ -1,7 +1,8 @@
-data/bg.png background 1
+data/nbg.png background 1
 data/Player/f1.png pFront 3
 data/Player/r1.png pRight 3
 data/Player/l1.png pLeft 3
 data/Player/jf1.png pJump 3
 data/dirt.png wDirt 1
 data/stone.png wStone 1
+data/tv.png television 3

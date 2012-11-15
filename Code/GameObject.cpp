@@ -1,4 +1,4 @@
-#include "manager.h"
+#include "gameObject.h"
 GameObject::GameObject()
 {
     position.c_x = 0;
@@ -9,6 +9,16 @@ GameObject::GameObject()
     name = "null";
     rotation = 0;
 }
+GameObject::GameObject(string n,float pos_x,float pos_y,float rot_r)
+{
+    position.c_x = pos_x;
+    position.c_y = pos_y;
+    position.h = 32;
+    position.w = 32;
+    position.calc();
+    name = n;
+    rotation = rot_r;
+}
 GameObject::GameObject(string n,float pos_x,float pos_y,float rot_r,float w,float h)
 {
     position.c_x = pos_x;
@@ -18,4 +28,9 @@ GameObject::GameObject(string n,float pos_x,float pos_y,float rot_r,float w,floa
     position.calc();
     name = n;
     rotation = rot_r;
+}
+void GameObject::m_event(sf::Vector2i vec)
+{
+    //std::cout << "Mouse Event!" << std::endl;
+    //Send to colliding obj
 }

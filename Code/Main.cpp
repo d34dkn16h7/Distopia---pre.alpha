@@ -22,18 +22,18 @@ void drawUpdate()
     mWindow.clear(sf::Color(255,0,0));
     mWindow.draw(bgSprite);
     myWorld.draw(mWindow,textureManager);
-    mPlayer->draw();
+    //mPlayer->draw();
     mWindow.display();
 }
 void update()
 {
-    mPlayer->update();
+    //mPlayer->update();
 }
 int main()
 {
     init();
     UpdateEvent uFrame;
-    mPlayer = new Player(textureManager,400,250);
+    //mPlayer = new Player(textureManager,400,250);
     bool windowActive = true;
     uFrame.AddFunction(update);
     uFrame.AddFunction(drawUpdate);
@@ -58,7 +58,11 @@ int main()
             case sf::Event::KeyPressed:
             case sf::Event::KeyReleased:
                 if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) mWindow.close();
-                mPlayer->input();
+                //mPlayer->input();
+                break;
+            case sf::Event::MouseButtonPressed:
+                GameObject::m_event(sf::Mouse::getPosition(mWindow));
+                //mPlayer->mouseEvent(sf::Mouse::getPosition(mWindow));
                 break;
             }
         }

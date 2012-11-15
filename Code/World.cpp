@@ -1,4 +1,4 @@
-#include "manager.h"
+#include "world.h"
 
 World::World(string source = "null")
 {
@@ -12,7 +12,7 @@ void World::load(string source)
     float x,y,r;
     while(file >> tag >> x >> y >> r)
     {
-        AddObject(GameObject(tag,x,y,r,32,32));
+        AddObject(GameObject(tag,x,y,r));
         cout << tag <<" : "<< x <<" : "<< y << " : "<< r << endl;
     }
 }
@@ -20,11 +20,11 @@ void World::AddObject(GameObject gmo)
 {
     objects.push_back(gmo);
 }
-void World::draw(sf::RenderWindow &r,TextureManager &tManager)
+void World::draw(sf::RenderWindow &r,TextureManager &tManager) // need fix
 {
-    sf::Sprite sprite;
     for(unsigned int i = 0; i < objects.size(); i++)
     {
+        sf::Sprite sprite;
         tmpObject = objects[i];
         sprite.setTexture(tManager.GetTexture(tmpObject.name));
         sprite.setPosition(tmpObject.position.left,tmpObject.position.top);

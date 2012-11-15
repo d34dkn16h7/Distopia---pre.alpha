@@ -1,4 +1,4 @@
-#include "manager.h"
+#include "collider.h"
 using namespace std;
 Collider::Collider()
 {
