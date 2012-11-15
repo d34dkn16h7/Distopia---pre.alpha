@@ -24,9 +24,11 @@ Player::Player(TextureManager &tManager,float xVal = 0,float yVal = 0)
     position.w = 32;
     position.h = 64;
     position.calc();
+    m_render = new Renderer(name);
     self[FRONT] = new Animation(tManager.GetAnimCount("pFront"),10,tManager.GetTextureVar("pFront"));
     self[RIGHT] = new Animation(tManager.GetAnimCount("pRight"),10,tManager.GetTextureVar("pRight"));
     self[LEFT] = new Animation(tManager.GetAnimCount("pLeft"),10,tManager.GetTextureVar("pLeft"));
+
 }
 void Player::draw()
 {

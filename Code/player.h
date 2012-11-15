@@ -5,7 +5,7 @@
 #include "animation.h"
 #include "m_rect.h"
 #include "main.h" //global var
-
+#include <iostream>
 class Player : GameObject
 {
 private:

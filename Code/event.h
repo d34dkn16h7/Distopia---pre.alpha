@@ -21,4 +21,15 @@ public:
         }
     }
 };
+class Info
+{
+    public:
+    Info()
+    {
+    }
+    virtual void info()
+    {
+        cout << "DEFAULT INFO" << endl;
+    }
+};
 #endif

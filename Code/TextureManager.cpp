@@ -15,7 +15,7 @@ void TextureManager::load(string source)
         if(tempImg.loadFromFile(fName))
         {
             AddTexture(tempImg,tag,animCount);
-            cout << fName << " : has loaded with this tag : " << tag << endl;
+            //cout << fName << " : has loaded with this tag : " << tag << endl;
         }
         else
             cout << fName << " : CAN'T LOAD: " << tag << endl;

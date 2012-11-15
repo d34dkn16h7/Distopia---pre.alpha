@@ -8,5 +8,5 @@
 #include "event.h"
 extern sf::RenderWindow mWindow;
 extern const float FPS;
-static float frameRate;
+//static float frameRate;
 #endif
