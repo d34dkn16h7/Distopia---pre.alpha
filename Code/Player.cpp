@@ -25,22 +25,9 @@ Player::Player(TextureManager &tManager,float xVal = 0,float yVal = 0)
     position.h = 64;
     position.calc();
     m_render = new Renderer(name);
-    self[FRONT] = new Animation(tManager.GetAnimCount("pFront"),10,tManager.GetTextureVar("pFront"));
-    self[RIGHT] = new Animation(tManager.GetAnimCount("pRight"),10,tManager.GetTextureVar("pRight"));
-    self[LEFT] = new Animation(tManager.GetAnimCount("pLeft"),10,tManager.GetTextureVar("pLeft"));
-
-}
-void Player::draw()
-{
-    if(left && !right) self[LEFT]->draw(mWindow,position);
-    else if(right && !left) self[RIGHT]->draw(mWindow,position);
-    else self[FRONT]->draw(mWindow,position);
 }
 void Player::update()
 {
-    if(left && !right) self[LEFT]->c_update();
-    else if(right && !left) self[RIGHT]->c_update();
-    else self[FRONT]->c_update();
 
     reRect();
     m_rect tmp = position;

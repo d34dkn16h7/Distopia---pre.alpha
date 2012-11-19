@@ -40,6 +40,8 @@
 		</Linker>
 		<Unit filename="Code\animation.cpp" />
 		<Unit filename="Code\animation.h" />
+		<Unit filename="Code\clip.cpp" />
+		<Unit filename="Code\clip.h" />
 		<Unit filename="Code\collider.cpp" />
 		<Unit filename="Code\collider.h" />
 		<Unit filename="Code\event.h" />

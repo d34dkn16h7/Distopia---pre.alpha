@@ -12,7 +12,8 @@ public:
     m_rect();
     m_rect(float center_x,float center_y,float weight,float height);
     void calc();
-    static Collider intersection(m_rect first,m_rect second);
+    static Collider intersection(m_rect first,m_rect second); // run for all m_rect?!
+    static Collider intersections(m_rect rect);
     static bool contain(m_rect rc,float x,float y);
     bool contain(int x,int y);
     bool contain(sf::Vector2i vec);

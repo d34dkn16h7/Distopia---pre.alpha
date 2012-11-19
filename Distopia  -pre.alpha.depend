@@ -93,7 +93,7 @@
 1351866060 source:c:\users\d34dkn16h7\desktop\distopia  -pre.alpha\code\gameobject.cpp
 	"Manager.h"
 
-1352994996 source:c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\gameobject.cpp
+1353340767 source:c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\gameobject.cpp
 	"gameObject.h"
 
 1352974318 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\manager.h
@@ -103,7 +103,7 @@
 	<map>
 	<SFML\Graphics.hpp>
 
-1352995422 source:c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\main.cpp
+1353342802 source:c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\main.cpp
 	"main.h"
 
 1352990744 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\main.h
@@ -114,10 +114,9 @@
 	"world.h"
 	"event.h"
 
-1352995133 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\player.h
+1353079777 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\player.h
 	"textureManager.h"
 	"gameObject.h"
-	"animation.h"
 	"m_rect.h"
 	"main.h"
 	<iostream>
@@ -132,20 +131,20 @@
 1352298164 source:c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\physics.cpp
 	"Manager.h"
 
-1352995259 source:c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\player.cpp
+1353340815 source:c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\player.cpp
 	"player.h"
 	<iostream>
 	<vector>
 
-1352994673 source:c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\texturemanager.cpp
+1353322101 source:c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\texturemanager.cpp
 	"textureManager.h"
 
-1352994886 source:c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\world.cpp
+1353342507 source:c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\world.cpp
 	"world.h"
 
 1350997320 source:c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\temp.cpp
 
-1352912442 source:c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\animation.cpp
+1353080181 source:c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\animation.cpp
 	"animation.h"
 
 1352974176 source:c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\collider.cpp
@@ -154,18 +153,16 @@
 1352973579 source:c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\m_rect.cpp
 	"m_rect.h"
 
-1352974407 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\animation.h
-	<SFML/Graphics.hpp>
-	"m_rect.h"
+1353079984 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\animation.h
 
-1352974726 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\m_rect.h
+1353340745 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\m_rect.h
 	<SFML/Graphics.hpp>
 	"collider.h"
 
 1352974195 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\collider.h
 	<string>
 
-1352995232 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\gameobject.h
+1353339530 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\gameobject.h
 	<SFML/Graphics.hpp>
 	<string>
 	<vector>
@@ -174,14 +171,12 @@
 	"event.h"
 	"renderer.h"
 
-1352974796 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\texturemanager.h
+1353324689 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\texturemanager.h
 	<SFML/Graphics.hpp>
 	<iostream>
 	<fstream>
 	<string>
 	<map>
-	"gameObject.h"
-	"m_rect.h"
 
 1352995072 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\world.h
 	<SFML/Graphics.hpp>
@@ -190,14 +185,29 @@
 	"gameObject.h"
 	"m_rect.h"
 
-1352979714 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\event.h
+1353339190 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\event.h
 	<vector>
-
-1352993730 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\renderer.h
 	<iostream>
+
+1353342401 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\renderer.h
+	<SFML/Graphics.hpp>
+	<iostream>
+	<fstream>
 	<vector>
 	<string>
+	<map>
+	"textureManager.h"
+	"gameObject.h"
+	"m_rect.h"
+	"clip.h"
 
-1352993838 source:c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\renderer.cpp
+1353342717 source:c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\renderer.cpp
 	"renderer.h"
+
+1353082882 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\clip.h
+	<SFML/Graphics.hpp>
+	<string>
+
+1353082982 source:c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\clip.cpp
+	"clip.h"
 

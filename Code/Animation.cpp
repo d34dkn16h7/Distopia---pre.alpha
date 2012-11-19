@@ -1,5 +1,5 @@
 #include "animation.h"
-Animation::Animation(int animCount,int frame,sf::Texture t)
+/*Animation::Animation(int animCount,int frame,sf::Texture t)
 {
     scale = 1;
     texture = t;
@@ -34,3 +34,6 @@ void Animation::s_scale(float s)
     scale = s;
     sprite.setScale(s,s);
 }
+void Animation::loadClips(string fileName)
+{
+}*/

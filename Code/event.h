@@ -21,15 +21,34 @@ public:
         }
     }
 };
-class Info
+
+class IEvent
 {
     public:
-    Info()
+    virtual void Event();
+};
+#include <iostream>
+using namespace std;
+class MouseEvent : public IEvent
+{
+    /*
+    Register To Event Mail List
+    */
+    public:
+    static void Event(sf::Vector2i p)
     {
+        //cout << "Mouse Event : " << p.x << " : " << p.y << endl;
     }
-    virtual void info()
+};
+class KeyboardEvent : public IEvent
+{
+    /*
+    Register To Event Mail List
+    */
+    public:
+    static void Event(string n)
     {
-        cout << "DEFAULT INFO" << endl;
+        cout << n << endl;
     }
 };
 #endif

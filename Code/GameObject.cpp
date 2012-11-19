@@ -38,3 +38,7 @@ void GameObject::m_event(sf::Vector2i vec)
     //std::cout << "Mouse Event!" << std::endl;
     //Send to colliding obj
 }
+void GameObject::Setup()
+{
+
+}

@@ -8,11 +8,13 @@
 #include "event.h"
 #include "renderer.h"
 using namespace std;
+class Renderer;
 class GameObject
 {
 private:
 protected:
     Renderer *m_render;
+    void Setup();
 public:
     m_rect position;
     float rotation;
@@ -21,9 +23,6 @@ public:
     GameObject(string n,float pos_x,float pos_y,float rot_r);
     GameObject(string n,float pos_x,float pos_y,float rot_r,float w,float h);
     static void m_event(sf::Vector2i vec);
-    void AddComponent()
-    {
-
-    }
+    void AddComponent();
 };
 #endif

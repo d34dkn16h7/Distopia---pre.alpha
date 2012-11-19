@@ -2,14 +2,12 @@
 #define PLAYER_H
 #include "textureManager.h"
 #include "gameObject.h"
-#include "animation.h"
 #include "m_rect.h"
 #include "main.h" //global var
 #include <iostream>
 class Player : GameObject
 {
 private:
-    Animation* self[4];
     float playerHeight;
     float speed;
     float grav;
