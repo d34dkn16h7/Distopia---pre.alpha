@@ -12,12 +12,12 @@ class m_rect;
 class World
 {
 private:
-    GameObject tmpObject;
-    vector<GameObject> objects;
+    GameObject* tmpObject;
+    vector<GameObject*> objects;
 public:
     World(string source);
     void load(string source);
-    void AddObject(GameObject gmo);
+    void AddObject(GameObject* gmo);
     void draw(sf::RenderWindow &r,TextureManager &tManager);
     vector<Collider> collision(m_rect player);
 };

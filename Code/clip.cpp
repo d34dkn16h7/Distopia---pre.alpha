@@ -1,8 +1,8 @@
 #include "clip.h"
 
-Clip::Clip(sf::Vector2i b,sf::Vector2i e,sf::Vector2f s)
+Clip::Clip(sf::Vector2i b,sf::Vector2i e)
 {
-    begin = b;end = e;size = s;
+    begin = b;end = e;
 }
 void Clip::updateIndex()
 {
@@ -22,4 +22,12 @@ void Clip::updateIndex()
         }
         /* UPDATE IMG RECT */
     }
+}
+void Clip::draw(sf::RenderWindow *r)
+{
+    r->draw(mySprite);
+}
+void Clip::updatePos(m_rect r)
+{
+    mySprite.setPosition(r.left,r.top);
 }

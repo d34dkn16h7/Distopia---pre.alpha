@@ -11,14 +11,13 @@ void TextureManager::load(string source)
     string fName,tag,clipFile;
     while(file >> fName >> tag >> clipFile)
     {
+        Debug::Error(clipFile);
         sf::Texture tempImg;
         if(tempImg.loadFromFile(fName))
         {
             AddTexture(tempImg,tag,clipFile);
-            //cout << fName << " : has loaded with this tag : " << tag << endl;
+            //cout << "New file -"<<fName << " : " << clipFile << endl;
         }
-        else
-            cout << fName << " : CAN'T LOAD: " << tag << endl;
     }
 }
 void TextureManager::AddTexture(sf::Texture& img,string key,string clipFile)

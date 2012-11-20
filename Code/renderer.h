@@ -21,16 +21,18 @@ private:
     static bool canDraw;
     map<string,Clip> a_clip;
     GameObject *owner;
-    string name;
-    void loadClips(string fileName);
+    string name,activeClip;
+    void loadClips();
 public:
     Renderer();
-    Renderer(string tName);
+    Renderer(string tName,GameObject* own);
     void Draw();
     void Update();
     static void Setup(sf::RenderWindow *target,TextureManager *source);
     static void RenderDraw();
     static void RenderUpdate();
+    static void DebugRender();
+    void Play(string clipName){activeClip = clipName;}
     string GetName(){return name;}
 };
 

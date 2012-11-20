@@ -6,7 +6,7 @@
 #define LEFT 2
 Player::Player(TextureManager &tManager,float xVal = 0,float yVal = 0)
 {
-    name = "Player";
+    name = "player";
     tmp = 1;
     scale = 1;
     speed = 1.25f;
@@ -24,7 +24,7 @@ Player::Player(TextureManager &tManager,float xVal = 0,float yVal = 0)
     position.w = 32;
     position.h = 64;
     position.calc();
-    m_render = new Renderer(name);
+    m_render = new Renderer(name,this);
 }
 void Player::update()
 {

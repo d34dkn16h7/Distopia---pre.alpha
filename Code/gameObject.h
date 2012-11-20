@@ -19,10 +19,8 @@ public:
     m_rect position;
     float rotation;
     string name;
-    GameObject();
+    GameObject(){}
     GameObject(string n,float pos_x,float pos_y,float rot_r);
-    GameObject(string n,float pos_x,float pos_y,float rot_r,float w,float h);
     static void m_event(sf::Vector2i vec);
-    void AddComponent();
 };
 #endif

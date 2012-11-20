@@ -38,6 +38,8 @@
 			<Add library="sfml-system" />
 			<Add directory="..\..\..\..\SFML-2.0-rc\lib" />
 		</Linker>
+		<Unit filename="Code\Debug.cpp" />
+		<Unit filename="Code\Debug.h" />
 		<Unit filename="Code\animation.cpp" />
 		<Unit filename="Code\animation.h" />
 		<Unit filename="Code\clip.cpp" />
