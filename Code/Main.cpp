@@ -26,7 +26,7 @@ static World myWorld("data/Map/world.map");
 void drawUpdate()
 {
     mWindow.clear(sf::Color(255,0,0));
-    mWindow.draw(bgSprite);
+    //mWindow.draw(bgSprite);
     Renderer::RenderDraw();
     //myWorld.draw(mWindow,textureManager);
     mWindow.display();
@@ -48,6 +48,7 @@ int main()
     uFrame.AddFunction(drawUpdate);
     sf::Clock fpsClock;
     fpsClock.restart();
+    //mPlayer->m_render->Play("idle");
     while(mWindow.isOpen())
     {
         sf::Event ev;

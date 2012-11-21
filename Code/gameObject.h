@@ -13,9 +13,9 @@ class GameObject
 {
 private:
 protected:
-    Renderer *m_render;
     void Setup();
 public:
+    Renderer *m_render;
     m_rect position;
     float rotation;
     string name;

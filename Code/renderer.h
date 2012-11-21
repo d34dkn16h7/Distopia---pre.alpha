@@ -1,7 +1,6 @@
 #ifndef RENDERER_H
 #define RENDERER_H
 #include <SFML/Graphics.hpp>
-#include <iostream>
 #include <fstream>
 #include <vector>
 #include <string>
@@ -33,7 +32,9 @@ public:
     static void RenderUpdate();
     static void DebugRender();
     void Play(string clipName){activeClip = clipName;}
+    void SetTexture(sf::Texture& t);
     string GetName(){return name;}
+    string GetActiveClip(){return activeClip;}
 };
 
 #endif // RENDERER_H

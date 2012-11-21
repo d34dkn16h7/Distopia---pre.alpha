@@ -8,13 +8,13 @@ class Clip
 {
 private:
     sf::Vector2i begin,end,index;
-    sf::Vector2f size;
+    sf::Vector2i chunkSize;
     float timer,tick,timerLimit;
     sf::Sprite mySprite;
 public:
     bool active;
-    Clip(){}
-    Clip(sf::Vector2i b,sf::Vector2i e);
+    Clip();
+    Clip(sf::Vector2i size,sf::Vector2i b,sf::Vector2i e);
     void updateTexture(sf::Texture &t)
     {
         mySprite.setTexture(t);

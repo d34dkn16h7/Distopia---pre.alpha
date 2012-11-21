@@ -1,5 +1,6 @@
 #include "renderer.h"
 #include "debug.h"
+#include <iostream>
 using namespace std;
 
 vector<Renderer*> Renderer::m_renders;
@@ -22,13 +23,19 @@ void Renderer::loadClips()
     if(fileName != "null")
     {
         ifstream file(fileName.c_str());
-        string animTag;
-        sf::Vector2i b,e;
-        while(file >> animTag >> b.y >> b.x >> e.y >> e.x)
+        if(file.is_open())
         {
-            a_clip[animTag] = Clip(b,e);
+            string animTag;
+            sf::Vector2i b,e;
+            sf::Vector2i chunkSize;
+            file >> chunkSize.x;
+            file >> chunkSize.y;
+            while(file >> animTag >> b.y >> b.x >> e.y >> e.x)
+            {
+                a_clip[animTag] = Clip(chunkSize,b,e);
+            }
+            Debug::Info("Clip File -" + name + " -" + fileName);
         }
-        Debug::Info("Clip File -" + name + " -" + fileName);
     }
 }
 void Renderer::Setup(sf::RenderWindow *target,TextureManager *source)
@@ -39,12 +46,16 @@ void Renderer::Setup(sf::RenderWindow *target,TextureManager *source)
     for(unsigned int i = 0;i < m_renders.size();i++)
     {
         m_renders[i]->loadClips();
+        m_renders[i]->SetTexture(rSource->GetTexture(m_renders[i]->GetName()));
     }
     canDraw = true;
 }
+void Renderer::SetTexture(sf::Texture& t)
+{
+    a_clip[activeClip].updateTexture(t);
+}
 void Renderer::Draw()
 {
-    a_clip[activeClip].updateTexture(rSource->GetTexture(name));
     a_clip[activeClip].draw(rTarget);
 }
 void Renderer::Update()

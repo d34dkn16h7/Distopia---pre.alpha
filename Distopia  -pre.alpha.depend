@@ -103,7 +103,7 @@
 	<map>
 	<SFML\Graphics.hpp>
 
-1353427341 source:c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\main.cpp
+1353513463 source:c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\main.cpp
 	"main.h"
 	"debug.h"
 
@@ -115,7 +115,7 @@
 	"world.h"
 	"event.h"
 
-1353079777 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\player.h
+1353511454 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\player.h
 	"textureManager.h"
 	"gameObject.h"
 	"m_rect.h"
@@ -163,7 +163,7 @@
 1352974195 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\collider.h
 	<string>
 
-1353428369 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\gameobject.h
+1353511325 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\gameobject.h
 	<SFML/Graphics.hpp>
 	<string>
 	<vector>
@@ -191,9 +191,8 @@
 	<vector>
 	<iostream>
 
-1353427336 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\renderer.h
+1353509606 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\renderer.h
 	<SFML/Graphics.hpp>
-	<iostream>
 	<fstream>
 	<vector>
 	<string>
@@ -203,17 +202,19 @@
 	"m_rect.h"
 	"clip.h"
 
-1353428606 source:c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\renderer.cpp
+1353513764 source:c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\renderer.cpp
 	"renderer.h"
 	"debug.h"
+	<iostream>
 
-1353426964 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\clip.h
+1353512730 c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\clip.h
 	<SFML/Graphics.hpp>
 	<string>
 	"m_rect.h"
 
-1353425403 source:c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\clip.cpp
+1353513680 source:c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\clip.cpp
 	"clip.h"
+	<iostream>
 
 1353427918 source:c:\users\d34dkn16h7\desktop\projects\distopia  -pre.alpha\code\debug.cpp
 	"debug.h"
