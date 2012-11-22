@@ -4,19 +4,62 @@
 using namespace std;
 
 vector<Renderer*> Renderer::m_renders;
-sf::RenderWindow* Renderer::rTarget;
-TextureManager* Renderer::rSource;
+sf::RenderWindow *Renderer::rTarget;
+TextureManager *Renderer::rSource;
 bool Renderer::canDraw;
 Renderer::Renderer()
 {
 }
-Renderer::Renderer(string tName,GameObject* own)
+Renderer::Renderer(string _name,GameObject *_owner)
 {
-    owner = own;
-    name = tName;
-    activeClip = "default";
+    owner = _owner;
+    name = _name;
+    anim = new Animation(this);
     m_renders.push_back(this);
 }
+void Renderer::Setup(sf::RenderWindow *_rTarget,TextureManager *_rSource)
+{
+    rTarget = _rTarget;
+    rSource = _rSource;
+    Debug::Info("SETUP REGISTERED NEW SOURCE AND TARGET");
+    for(unsigned int i = 0;i < m_renders.size();i++)
+    {
+        //m_renders[i]->loadClips();
+    }
+    canDraw = true;
+}
+void Renderer::Draw()
+{
+    anim->Draw();
+    //a_clip[activeClip].Draw(rTarget);
+}
+void Renderer::DrawSprite(sf::Sprite &_sprite)
+{
+    rTarget->draw(_sprite);
+}
+void Renderer::Update()
+{
+    anim->Update();
+    //a_clip[activeClip].UpdatePos(owner->position);
+}
+void Renderer::RenderDraw()
+{
+    if(canDraw)
+    {
+        for(unsigned int i = 0;i < m_renders.size();i++)
+        {
+            m_renders[i]->Draw();
+        }
+    }
+}
+void Renderer::RenderUpdate()
+{
+    for(unsigned int i = 0;i < m_renders.size();i++)
+    {
+        m_renders[i]->Update();
+    }
+}
+/*
 void Renderer::loadClips()
 {
     string fileName = rSource->GetClipSource(name);
@@ -37,56 +80,4 @@ void Renderer::loadClips()
             Debug::Info("Clip File -" + name + " -" + fileName);
         }
     }
-}
-void Renderer::Setup(sf::RenderWindow *target,TextureManager *source)
-{
-    rTarget = target;
-    rSource = source;
-    Debug::Info("SETUP REGISTERED NEW SOURCE AND TARGET");
-    for(unsigned int i = 0;i < m_renders.size();i++)
-    {
-        m_renders[i]->loadClips();
-        m_renders[i]->SetTexture(rSource->GetTexture(m_renders[i]->GetName()));
-    }
-    canDraw = true;
-}
-void Renderer::SetTexture(sf::Texture& t)
-{
-    a_clip[activeClip].updateTexture(t);
-}
-void Renderer::Draw()
-{
-    a_clip[activeClip].draw(rTarget);
-}
-void Renderer::Update()
-{
-    a_clip[activeClip].updatePos(owner->position);
-}
-void Renderer::RenderDraw()
-{
-    if(canDraw)
-    {
-        for(unsigned int i = 0;i < m_renders.size();i++)
-        {
-            m_renders[i]->Draw();
-        }
-    }
-}
-void Renderer::DebugRender()
-{
-    if(canDraw)
-    {
-        for(unsigned int i = 0;i < m_renders.size();i++)
-        {
-                GameObject* tmpGmo = m_renders[i]->owner;
-                std::cout << tmpGmo->position.c_x << std::endl;
-        }
-    }
-}
-void Renderer::RenderUpdate()
-{
-    for(unsigned int i = 0;i < m_renders.size();i++)
-    {
-        m_renders[i]->Update();
-    }
-}
+}*/

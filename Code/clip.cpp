@@ -8,13 +8,15 @@ Clip::Clip()
     index = sf::Vector2i(0,0);
     chunkSize = sf::Vector2i(32,32);
 }
-Clip::Clip(sf::Vector2i size,sf::Vector2i b,sf::Vector2i e)
+Clip::Clip(sf::Vector2i _chunkSize,sf::Vector2i _begin,sf::Vector2i _end)
 {
-    begin = b;end = e;chunkSize = size;
+    begin = _begin;
+    end = _end;
+    chunkSize = _chunkSize;
     index.x = 0;
     index.y = 0;
 }
-void Clip::updateIndex()
+void Clip::Update()
 {
     timer += tick;
     if(timer >= timerLimit)
@@ -30,17 +32,22 @@ void Clip::updateIndex()
                 index.y = begin.y;
             }
         }
-        /* UPDATE IMG RECT */
+        /* UPDATE IMG RECT - NO NEED? */
     }
 }
-void Clip::draw(sf::RenderWindow *r)
+sf::IntRect Clip::GetRect()
+{
+    return sf::IntRect(index.x * chunkSize.x,index.y * chunkSize.y,  chunkSize.x,chunkSize.y);
+}
+/*
+void Clip::Draw(sf::RenderWindow *r)
 {
     r->draw(mySprite);
 }
-void Clip::updatePos(m_rect r)
+void Clip::UpdatePos(M_Rect r)
 {
-    mySprite.setPosition(r.c_x,r.top);/*
+    mySprite.setPosition(r.c_x,r.top);
     cout << "index" << index.x << " : " << index.y << endl;
-    cout << "chunkSize" << chunkSize.x << " : " << chunkSize.y << endl;*/
+    cout << "chunkSize" << chunkSize.x << " : " << chunkSize.y << endl;
     mySprite.setTextureRect(sf::IntRect(index.x * chunkSize.x,index.y * chunkSize.y,chunkSize.x,chunkSize.y));
-}
+}*/

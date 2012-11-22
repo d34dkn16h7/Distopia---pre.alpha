@@ -4,7 +4,7 @@
 #define FRONT 0
 #define RIGHT 1
 #define LEFT 2
-Player::Player(TextureManager &tManager,float xVal = 0,float yVal = 0)
+Player::Player(float xVal = 0,float yVal = 0)
 {
     name = "player";
     tmp = 1;
@@ -26,11 +26,11 @@ Player::Player(TextureManager &tManager,float xVal = 0,float yVal = 0)
     position.calc();
     m_render = new Renderer(name,this);
 }
-void Player::update()
+void Player::Update()
 {
 
     reRect();
-    m_rect tmp = position;
+    M_Rect tmp = position;
 
     if(right && !left && !c_left) tmp.c_x += (speed * scale);
     if(!right && left && !c_right) tmp.c_x -= (speed * scale);
@@ -41,7 +41,7 @@ void Player::update()
 }
 void Player::mouseEvent(sf::Vector2i mPos)
 {
-    if(position.contain(mPos))
+    if(position.Contain(mPos))
     {
         cout << "Player clicked!" << endl;
     }

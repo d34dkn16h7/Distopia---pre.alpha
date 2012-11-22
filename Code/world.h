@@ -4,11 +4,11 @@
 #include <string>
 #include "textureManager.h"
 #include "gameObject.h"
-#include "m_rect.h"
+#include "M_rect.h"
 using namespace std;
 class GameObject;
 class Collider;
-class m_rect;
+class M_Rect;
 class World
 {
 private:
@@ -16,10 +16,10 @@ private:
     vector<GameObject*> objects;
 public:
     World(string source);
-    void load(string source);
+    void Load(string source);
     void AddObject(GameObject* gmo);
-    void draw(sf::RenderWindow &r,TextureManager &tManager);
-    vector<Collider> collision(m_rect player);
+    void Draw(sf::RenderWindow &r,TextureManager &tManager);
+    vector<Collider> collision(M_Rect player);
 };
 #endif
 

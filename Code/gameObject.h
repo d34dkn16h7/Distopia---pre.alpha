@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 #include <iostream> // tmp
-#include "m_rect.h"
+#include "M_rect.h"
 #include "event.h"
 #include "renderer.h"
 using namespace std;
@@ -16,11 +16,10 @@ protected:
     void Setup();
 public:
     Renderer *m_render;
-    m_rect position;
+    M_Rect position;
     float rotation;
     string name;
     GameObject(){}
-    GameObject(string n,float pos_x,float pos_y,float rot_r);
-    static void m_event(sf::Vector2i vec);
+    GameObject(string _name,float pos_x,float pos_y,float rot_r);
 };
 #endif

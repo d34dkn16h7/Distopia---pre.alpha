@@ -16,11 +16,12 @@ private:
     static vector<sf::Text> messages;
 public:
     static void Info(string msg);
-    static void Init(string fontFile,sf::RenderWindow* rW,int fSize,int maxMSG);
+    static void Init(string fontFile,int _fontSize,int _msgMax);
     static void Warning(string msg);
     static void Error(string msg);
     static void Event(string msg);
     static void Draw();
+    static void Update();
     static float PreSame(int pos);
 };
 

@@ -1,10 +1,9 @@
 #ifndef PLAYER_H
 #define PLAYER_H
+#include <iostream>
 #include "textureManager.h"
 #include "gameObject.h"
-#include "m_rect.h"
-#include "main.h" //global var
-#include <iostream>
+#include "M_rect.h"
 class Player : public GameObject
 {
 private:
@@ -18,9 +17,9 @@ private:
     float scale;
 public:
     float targetY;
-    Player(TextureManager &tManager,float xVal,float yVal);
+    Player(float xVal,float yVal);
     void draw();
-    void update();
+    void Update();
     void input();
     void GravityUpdate();
     void groundedUpdate(bool val)
@@ -32,7 +31,7 @@ public:
     {
         position.calc();
     }
-    m_rect getPosition()
+    M_Rect getPosition()
     {
         return position;
     }

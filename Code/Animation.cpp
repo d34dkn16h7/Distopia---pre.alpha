@@ -1,39 +1,22 @@
 #include "animation.h"
-/*Animation::Animation(int animCount,int frame,sf::Texture t)
+Animation::Animation(Renderer* _owner)
 {
-    scale = 1;
-    texture = t;
-    counter = 0;
-    currentAnimationIndex = 0;
-    frameLimit = frame;
-    chunkSize = t.getSize().x / animCount;
-    animationCount = (int)(t.getSize().x / chunkSize);
-    sprite.setTexture(texture);
-    sprite.setTextureRect(sf::IntRect(currentAnimationIndex * chunkSize,0,chunkSize,texture.getSize().y));
+    owner = _owner;
+    currentClip = "default";
+    clip[currentClip] = Clip();
+    //anim.setTexture(owner->rSource->GetTexture(owner->GetName()));
 }
-void Animation::c_update()
+void Animation::AddClip(string _name,Clip _clip)
 {
-    counter++;
-    if(counter > frameLimit)
-    {
-        currentAnimationIndex++;
-        if(currentAnimationIndex >= animationCount)
-            currentAnimationIndex = 0;
-
-        counter = 0;
-        sprite.setTextureRect(sf::IntRect(currentAnimationIndex * chunkSize,0,chunkSize,texture.getSize().y));
-    }
+    clip[_name] = _clip;
 }
-void Animation::draw(sf::RenderWindow &window,m_rect pos)
+void Animation::Update()
 {
-    sprite.setPosition(pos.left,pos.top);
-    window.draw(sprite);
+    clip[currentClip].Update();
+    anim.setTextureRect(clip[currentClip].GetRect());
 }
-void Animation::s_scale(float s)
+void Animation::Draw()
 {
-    scale = s;
-    sprite.setScale(s,s);
+    Debug::Event("I should draw some sprites!");
+    owner->DrawSprite(anim);
 }
-void Animation::loadClips(string fileName)
-{
-}*/

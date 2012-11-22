@@ -1,6 +1,6 @@
-#include "m_rect.h"
+#include "M_rect.h"
 
-m_rect::m_rect()
+M_Rect::M_Rect()
 {
     c_x = 0;
     c_y = 0;
@@ -8,7 +8,7 @@ m_rect::m_rect()
     h = 1;
     calc();
 }
-m_rect::m_rect(float center_x,float center_y,float weight,float height)
+M_Rect::M_Rect(float center_x,float center_y,float weight,float height)
 {
     c_x = center_x;
     c_y = center_y;
@@ -17,14 +17,14 @@ m_rect::m_rect(float center_x,float center_y,float weight,float height)
     calc();
 }
 
-void m_rect::calc()
+void M_Rect::calc()
 {
     left = c_x - (w/2);
     right = c_x + (w/2);
     top = c_y - (h/2);
     bottom = c_y + (h/2);
 }
-Collider m_rect::intersection(m_rect first/* PLAYER */,m_rect second/* OBJECT */)
+Collider M_Rect::Intersection(M_Rect first/* PLAYER */,M_Rect second/* OBJECT */)
 {
     Collider col;
     if(first.left == second.left && first.right == second.right)
@@ -67,7 +67,7 @@ Collider m_rect::intersection(m_rect first/* PLAYER */,m_rect second/* OBJECT */
     }
     return col;
 }
-bool m_rect::contain(m_rect rc,float x,float y)
+bool M_Rect::Contain(M_Rect rc,float x,float y)
 {
     if(rc.left < x && rc.right > x)
     {
@@ -76,7 +76,7 @@ bool m_rect::contain(m_rect rc,float x,float y)
     }
     return false;
 }
-bool m_rect::contain(int x,int y)
+bool M_Rect::Contain(int x,int y)
 {
     if(left < x && right > x)
     {
@@ -87,7 +87,7 @@ bool m_rect::contain(int x,int y)
     }
     return false;
 }
-bool m_rect::contain(sf::Vector2i vec)
+bool M_Rect::Contain(sf::Vector2i vec)
 {
     if(left < vec.x && right > vec.x)
     {

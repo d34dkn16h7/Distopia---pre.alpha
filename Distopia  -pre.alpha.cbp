@@ -47,6 +47,8 @@
 		<Unit filename="Code\collider.cpp" />
 		<Unit filename="Code\collider.h" />
 		<Unit filename="Code\event.h" />
+		<Unit filename="Code\game.cpp" />
+		<Unit filename="Code\game.h" />
 		<Unit filename="Code\gameObject.cpp" />
 		<Unit filename="Code\gameObject.h" />
 		<Unit filename="Code\m_rect.cpp" />

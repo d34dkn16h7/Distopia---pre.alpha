@@ -7,11 +7,11 @@ sf::Font Debug::dFont;
 int Debug::fontSize;
 int Debug::msgMax;
 bool Debug::inited;
-void Debug::Init(string fontFile,sf::RenderWindow* rW,int fSize,int maxMSG)
+void Debug::Init(string fontFile,int _fontSize,int _msgMax)
 {
-    msgMax = maxMSG;
-    fontSize = fSize;
-    msgTarget = rW;
+    msgTarget = new sf::RenderWindow(sf::VideoMode(500,300,32),"Debug -PRE.ALPHA",sf::Style::Resize | sf::Style::Close);
+    msgMax = _msgMax;
+    fontSize = _fontSize;
     if(!dFont.loadFromFile(fontFile))
         cout << "FONT INIT FAIL" << endl;
     inited = true;
@@ -64,10 +64,31 @@ void Debug::Draw()
 {
     if(inited)
     {
+        msgTarget->clear(sf::Color(0,0,0));
         for(unsigned int i = 0; i < messages.size(); i++)
         {
             messages[i].setPosition(10.0f + PreSame(i),(float)i * 19.0f);
             msgTarget->draw(messages[i]);
+        }
+        msgTarget->display();
+    }
+}
+void Debug::Update()
+{
+    if(inited)
+    {
+        sf::Event ev;
+        while(msgTarget->pollEvent(ev))
+        {
+            switch(ev.type)
+            {
+            case sf::Event::Closed:
+                msgTarget->close();
+            case sf::Event::KeyPressed:
+            case sf::Event::KeyReleased:
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {msgTarget->close();}
+                break;
+            }
         }
     }
 }
