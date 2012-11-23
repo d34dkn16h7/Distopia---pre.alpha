@@ -1,9 +1,12 @@
 #ifndef PLAYER_H
 #define PLAYER_H
+
 #include <iostream>
+
 #include "textureManager.h"
 #include "gameObject.h"
 #include "M_rect.h"
+
 class Player : public GameObject
 {
 private:
@@ -36,4 +39,5 @@ public:
         return position;
     }
 };
-#endif
+
+#endif //PLAYER_H

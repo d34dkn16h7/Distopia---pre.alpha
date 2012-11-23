@@ -1,13 +1,17 @@
 #ifndef GAMEOBJECT_H
 #define GAMEOBJECT_H
+
 #include <SFML/Graphics.hpp>
+#include <iostream> // tmp
 #include <string>
 #include <vector>
-#include <iostream> // tmp
+
 #include "M_rect.h"
 #include "event.h"
 #include "renderer.h"
+
 using namespace std;
+
 class Renderer;
 class GameObject
 {

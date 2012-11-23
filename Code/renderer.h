@@ -1,14 +1,18 @@
 #ifndef RENDERER_H
 #define RENDERER_H
+
 #include <SFML/Graphics.hpp>
 #include <fstream>
 #include <vector>
 #include <string>
+
 #include "textureManager.h"
 #include "gameObject.h"
-#include "M_rect.h"
 #include "animation.h"
+#include "M_rect.h"
+
 using namespace std;
+
 class GameObject;
 class Animation;
 class Renderer

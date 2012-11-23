@@ -4,7 +4,6 @@ Game::Game()
 {
     textureManager = new TextureManager("data/imgList");
     world = new World("data/Map/world.map");
-    Debug::Init("data/Delius-Regular.ttf",15,15);
     player = new Player(400,250);
     window = new RenderWindow(VideoMode(800,500,32),"Game -PRE.ALPHA",!sf::Style::Resize | sf::Style::Close);
     window->setPosition(sf::Vector2i(100,250));

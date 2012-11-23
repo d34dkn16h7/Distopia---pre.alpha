@@ -1,6 +1,9 @@
 #ifndef EVENT_H
 #define EVENT_H
+
+#include <iostream>
 #include <vector>
+
 using namespace std;
 typedef void (*CallBack)(void);
 
@@ -27,8 +30,6 @@ class IEvent
     public:
     virtual void Event();
 };
-#include <iostream>
-using namespace std;
 class MouseEvent : public IEvent
 {
     /*
@@ -51,4 +52,5 @@ class KeyboardEvent : public IEvent
         cout << n << endl;
     }
 };
+
 #endif

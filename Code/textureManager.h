@@ -1,12 +1,16 @@
 #ifndef TEXTUREMANAGER_H
 #define TEXTUREMANAGER_H
+
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <map>
+
 #include "debug.h"
+
 using namespace std;
+
 class TextureManager
 {
 private:
@@ -26,4 +30,4 @@ public:
         return imgCount;
     }
 };
-#endif
+#endif //TEXTUREMANAGER_H

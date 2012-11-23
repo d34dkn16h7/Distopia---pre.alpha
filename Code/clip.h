@@ -1,9 +1,13 @@
 #ifndef CLIP_H
 #define CLIP_H
+
 #include <SFML/Graphics.hpp>
 #include <string>
+
 #include "M_rect.h"
+
 using namespace std;
+
 class Clip
 {
 private:
@@ -17,4 +21,5 @@ public:
     void Update();
     sf::IntRect GetRect();
 };
+
 #endif // CLIP_H

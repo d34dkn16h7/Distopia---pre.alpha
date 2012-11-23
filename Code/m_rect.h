@@ -1,8 +1,11 @@
 #ifndef MRECT_H
 #define MRECT_H
+
 #include <SFML/Graphics.hpp>
 #include "collider.h"
+
 class Collider;
+
 class M_Rect
 {
 private:
@@ -18,4 +21,5 @@ public:
     bool Contain(int x,int y);
     bool Contain(sf::Vector2i vec);
 };
-#endif
+
+#endif //MRECT_H

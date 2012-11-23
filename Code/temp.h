@@ -1,10 +1,13 @@
 #ifndef TEMP_H
 #define TEMP_H
+
 #include <fstream>
 #include <vector>
 #include <map>
 #include <iostream>
+
 #include "player.h"
+
 using namespace std;
 
 class Force

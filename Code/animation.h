@@ -1,11 +1,15 @@
 #ifndef ANIMATION_H
 #define ANIMATION_H
+
 #include <SFML/Graphics.hpp>
 #include <string>
 #include <map>
+
 #include "renderer.h"
 #include "clip.h"
+
 using namespace std;
+
 class Renderer;
 class Animation
 {

@@ -54,7 +54,6 @@
 		<Unit filename="Code\m_rect.cpp" />
 		<Unit filename="Code\m_rect.h" />
 		<Unit filename="Code\main.cpp" />
-		<Unit filename="Code\main.h" />
 		<Unit filename="Code\player.cpp" />
 		<Unit filename="Code\player.h" />
 		<Unit filename="Code\renderer.cpp" />

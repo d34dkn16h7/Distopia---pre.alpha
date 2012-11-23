@@ -1,82 +1,79 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Dbg" />
-	<File name="Code\Debug.cpp" open="1" top="0" tabpos="5">
+	<File name="Code\Debug.cpp" open="0" top="0" tabpos="5">
 		<Cursor position="1844" topLine="47" />
 	</File>
-	<File name="Code\Debug.h" open="1" top="0" tabpos="4">
-		<Cursor position="607" topLine="0" />
+	<File name="Code\Debug.h" open="0" top="0" tabpos="4">
+		<Cursor position="130" topLine="0" />
 	</File>
 	<File name="Code\animation.cpp" open="0" top="0" tabpos="5">
 		<Cursor position="157" topLine="0" />
 	</File>
 	<File name="Code\animation.h" open="0" top="0" tabpos="0">
-		<Cursor position="491" topLine="0" />
+		<Cursor position="194" topLine="0" />
 	</File>
 	<File name="Code\clip.cpp" open="0" top="0" tabpos="4">
 		<Cursor position="797" topLine="11" />
 	</File>
 	<File name="Code\clip.h" open="0" top="0" tabpos="3">
-		<Cursor position="407" topLine="0" />
+		<Cursor position="387" topLine="0" />
 	</File>
 	<File name="Code\collider.cpp" open="0" top="0" tabpos="1">
 		<Cursor position="18" topLine="0" />
 	</File>
 	<File name="Code\collider.h" open="0" top="0" tabpos="0">
-		<Cursor position="308" topLine="0" />
+		<Cursor position="435" topLine="0" />
 	</File>
 	<File name="Code\event.h" open="0" top="0" tabpos="1">
-		<Cursor position="664" topLine="6" />
+		<Cursor position="131" topLine="0" />
 	</File>
-	<File name="Code\game.cpp" open="1" top="1" tabpos="2">
-		<Cursor position="548" topLine="0" />
+	<File name="Code\game.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="140" topLine="0" />
 	</File>
-	<File name="Code\game.h" open="1" top="0" tabpos="1">
+	<File name="Code\game.h" open="0" top="0" tabpos="1">
 		<Cursor position="14" topLine="0" />
 	</File>
 	<File name="Code\gameObject.cpp" open="0" top="0" tabpos="2">
 		<Cursor position="394" topLine="0" />
 	</File>
 	<File name="Code\gameObject.h" open="0" top="0" tabpos="1">
-		<Cursor position="314" topLine="0" />
+		<Cursor position="230" topLine="0" />
 	</File>
 	<File name="Code\m_rect.cpp" open="0" top="0" tabpos="2">
 		<Cursor position="411" topLine="0" />
 	</File>
 	<File name="Code\m_rect.h" open="0" top="0" tabpos="4">
-		<Cursor position="386" topLine="0" />
+		<Cursor position="587" topLine="0" />
 	</File>
-	<File name="Code\main.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="34" topLine="0" />
-	</File>
-	<File name="Code\main.h" open="0" top="0" tabpos="3">
-		<Cursor position="0" topLine="0" />
+	<File name="Code\main.cpp" open="0" top="0" tabpos="3">
+		<Cursor position="126" topLine="0" />
 	</File>
 	<File name="Code\player.cpp" open="0" top="0" tabpos="4">
 		<Cursor position="126" topLine="0" />
 	</File>
 	<File name="Code\player.h" open="0" top="0" tabpos="3">
-		<Cursor position="406" topLine="0" />
+		<Cursor position="784" topLine="0" />
 	</File>
 	<File name="Code\renderer.cpp" open="0" top="0" tabpos="2">
 		<Cursor position="904" topLine="10" />
 	</File>
 	<File name="Code\renderer.h" open="0" top="0" tabpos="1">
-		<Cursor position="395" topLine="0" />
+		<Cursor position="362" topLine="0" />
 	</File>
 	<File name="Code\temp.h" open="0" top="0" tabpos="0">
-		<Cursor position="151" topLine="0" />
+		<Cursor position="170" topLine="7" />
 	</File>
 	<File name="Code\textureManager.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="732" topLine="0" />
 	</File>
 	<File name="Code\textureManager.h" open="0" top="0" tabpos="0">
-		<Cursor position="176" topLine="0" />
+		<Cursor position="728" topLine="0" />
 	</File>
 	<File name="Code\world.cpp" open="0" top="0" tabpos="5">
 		<Cursor position="1082" topLine="6" />
 	</File>
 	<File name="Code\world.h" open="0" top="0" tabpos="6">
-		<Cursor position="272" topLine="0" />
+		<Cursor position="506" topLine="0" />
 	</File>
 </CodeBlocks_layout_file>
