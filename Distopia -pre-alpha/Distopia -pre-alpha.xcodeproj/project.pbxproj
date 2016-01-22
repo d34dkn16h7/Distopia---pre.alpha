@@ -1,0 +1,74 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		F699B2201BDB028600C307A1 /* Code */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Code; sourceTree = "<group>"; };
+		F699B2211BDB028600C307A1 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = data; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		F699B2191BDB027800C307A1 = {
+			isa = PBXGroup;
+			children = (
+				F699B2201BDB028600C307A1 /* Code */,
+				F699B2211BDB028600C307A1 /* data */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		F699B21A1BDB027800C307A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = F699B21D1BDB027800C307A1 /* Build configuration list for PBXProject "Distopia -pre-alpha" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F699B2191BDB027800C307A1;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		F699B21E1BDB027800C307A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		F699B21F1BDB027800C307A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F699B21D1BDB027800C307A1 /* Build configuration list for PBXProject "Distopia -pre-alpha" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F699B21E1BDB027800C307A1 /* Debug */,
+				F699B21F1BDB027800C307A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F699B21A1BDB027800C307A1 /* Project object */;
+}

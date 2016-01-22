@@ -2,6 +2,6 @@
 int main()
 {
     Debug dbgInit; // init debug window;
-    new Game();
+    Game *myGame = new Game();
     return 0;
 }

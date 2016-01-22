@@ -1,0 +1,5 @@
+data/nbg.png background null
+data/Player/playerSprite.png player data/anim/player.a_clip
+data/dirt.png wDirt null
+data/stone.png wStone null
+data/tv.png television null
